@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/img/Packekenizer.ico" type="image/x-icon">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="/static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <!-- <div class="sidebar-brand-icon">
+                    <image src="\assets\img\Packetenizer_1.png" height="100px" width="100px"></image>
+                </div> -->
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-text mx-3"><span>Prypto</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href={{url_for('index')}}><i class="fas fa-home"></i><span>Homepage</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-chart-line"></i><span>Analysis</span></a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="TCP_details.html"><i class="fas fa-tachometer-alt"></i><span>TCP Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="UDP_details.html"><i class="fas fa-tachometer-alt"></i><span>UDP Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="ICMP_details.html"><i class="fas fa-tachometer-alt"></i><span>ICMP Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="DNS_details.html"><i class="fas fa-tachometer-alt"></i><span>DNS Dashboard</span></a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Connection Details</span></a></li> -->
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"><i class="fas fa-exchange-alt fa-sm text-white-50"></i></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Analysis</h3>
+                        <!--<a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a> -->
+                    </div>
+                    <!-- <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h4 class="text-dark mb-0">Client</h3>
+                    </div> -->
+
+                    <div class="row">
+                        <!-- <div class="col-lg-7 col-xl-1">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">Previous history</h6>
+                                    
+                                    
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Date_1&quot;,&quot;Date_2&quot;,&quot;Date_3&quot;,&quot;Date_4&quot;,&quot;Date_5&quot;,&quot;Date_6&quot;,&quot;Date_7&quot;,&quot;Date_8&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Price&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;15&quot;,&quot;30&quot;,&quot;45&quot;,&quot;60&quot;,&quot;75&quot;,&quot;90&quot;,&quot;105&quot;,&quot;120&quot;],&quot;backgroundColor&quot;:&quot;rgba(2, 20, 13,0.7)&quot;,&quot;borderColor&quot;:&quot;rgba(2, 20, 13, 1)&quot;},{&quot;label&quot;:&quot;Price_1&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;10&quot;,&quot;29&quot;,&quot;40&quot;,&quot;58&quot;,&quot;73&quot;,&quot;89&quot;,&quot;105&quot;,&quot;119&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223,0.7)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{  &quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;beginAtZero&quot;:&quot;true&quot;,&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                    
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="col-lg-5 col-xl-9">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">Prediction for next 100 Days  </h6>
+                                </div>
+                                <div class="card-body">
+                                    <img src="../static/predict/100days.png" alt="">
+                                    <!-- <div class="text-center small mt-4"><span class="mr-2"><i class="fas fa-circle text-primary"></i>&nbsp;Identified</span><span class="mr-2"><i class="fas fa-circle text-success"></i>&nbsp;Unidentified Layer 2</span><span class="mr-2"><i class="fas fa-circle text-info"></i>&nbsp;Unidentified Layer 3</span></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-11">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">Example Graph</h6>
+                                    <!-- <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="card-body">
+                                    <img src="../static/predict/Scatter.png" alt="">
+                                    <!-- <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Example_data&quot;,&quot;Example_data&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#4e73df&quot;,&quot;#36b9cc&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;50&quot;,&quot;50&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{}}}"></canvas></div>
+                                    <div class="text-center small mt-4"><span class="mr-2"><i class="fas fa-circle text-primary"></i>&nbsp;Example_data</span><span class="mr-2"><i class="fas fa-circle text-info"></i>&nbsp;Example_data</span></div>
+                                    <div class="text-center small mt-4"><span class="mr-2">&nbsp;Example_unit</span></div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-xl-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">Example Bar graph</h6>
+                                    <!-- <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="card-body">
+                                    <img src="../static/predict/Bar.png" alt="">
+                                    <!-- <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Example_value&quot;,&quot;Example_value&quot;,&quot;Example_value&quot;,&quot;Example_value&quot;,&quot;Example_value&quot;,&quot;Example_value&quot;,&quot;Example_value&quot;,&quot;Example_value&quot;,&quot;Example_value&quot;,&quot;Example_value&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Example_data&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;440&quot;,&quot;30&quot;,&quot;500&quot;,&quot;150&quot;,&quot;100&quot;,&quot;200&quot;,&quot;350&quot;,&quot;5&quot;,&quot;250&quot;,&quot;110&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                    <div class="text-center small mt-4"><span class="mr-2">&nbsp;Example_data vs Example_data1</span></div>
+                                    <div class="text-center small mt-4"><span class="mr-2">&nbsp;In Example Units</span></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-5.5 mb-4">
+                            <div class="card shadow border-left-danger py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-danger font-weight-bold text-xs mb-1"><span>News Box</span></div>
+                                            <div class="text-dark h5 mb-0"><span>{{news1}}</span> <span class="font-weight-bold">" "</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-5.5 mb-4">
+                            <div class="card shadow border-left-warning py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span>News Box</span></div>
+                                            <div class="text-dark h5 mb-0"><span>{{news2}} </span> <span class="font-weight-bold">" "</span></div>
+                                            <!-- <div class="text-dark h5 mb-0"><span>Destination Port : </span> <span class="font-weight-bold">443 </span> </div>
+                                            <div class="text-dark h5 mb-0"><span>Average Transmission Time : </span> <span class="font-weight-bold"> 880.33ms</span> </div>
+                                            <div class="text-dark h5 mb-0"><span>Protocol : </span> <span class="font-weight-bold"> HTTPS</span> </div>
+                                            <div class="text-dark h5 mb-0"><span>Unintended : </span> <span class="font-weight-bold"> False</span> </div>
+                                            <div class="text-dark h5 mb-0"><span>IP Versiom : </span> <span class="font-weight-bold"> IPv4</span> </div> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Prypto 2022</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="/static/js/theme.js"></script>  
+</body>
+
+</html>
